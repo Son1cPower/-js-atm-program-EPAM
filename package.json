@@ -1,0 +1,58 @@
+{
+  "name": "js-atm-program",
+  "version": "1.0.0",
+  "description": "Automated Testing (JavaScript) Mentoring program [Basic]",
+  "license": "EPAM Systems",
+  "private": true,
+  "scripts": {
+    "prepare": "husky install",
+    "check-format": "prettier --check .",
+    "format": "prettier --write .",
+    "check-lint": "eslint . --ext js",
+    "check-all": "npm run check-format && npm run check-lint"
+  },
+  "dependencies": {
+    "@wdio/cli": "^7.23.0",
+    "@wdio/devtools-service": "^7.23.0",
+    "@wdio/junit-reporter": "^7.23.0",
+    "@wdio/local-runner": "^7.23.0",
+    "@wdio/mocha-framework": "^7.23.0",
+    "@wdio/spec-reporter": "^7.23.0",
+    "@wdio/types": "^7.23.0",
+    "allure-commandline": "^2.18.1",
+    "eslint": "8.22.0",
+    "eslint-config-airbnb-base": "^15.0.0",
+    "eslint-config-google": "^0.14.0",
+    "eslint-config-prettier": "^8.5.0",
+    "eslint-plugin-import": "^2.26.0",
+    "eslint-plugin-mocha": "^10.1.0",
+    "eslint-plugin-wdio": "^7.21.0",
+    "faker": "^6.6.6",
+    "geckodriver": "^3.0.2",
+    "husky": "^8.0.1",
+    "prettier": "^2.7.1",
+    "rimraf": "^3.0.2",
+    "wdio-geckodriver-service": "^3.0.4"
+  },
+  "workspaces": [
+    "module-2",
+    "module-3",
+    "module-4",
+    "module-5",
+    "module-6",
+    "module-7",
+    "module-8",
+    "module-9",
+    "module-9/service"
+  ],
+  "engines": {
+    "node": ">=16.0.0 < 17.0.0"
+  },
+  "devDependencies": {
+    "@faker-js/faker": "^7.5.0",
+    "@wdio/allure-reporter": "^7.25.2",
+    "@wdio/selenium-standalone-service": "^7.25.1",
+    "chromedriver": "^106.0.1",
+    "wdio-chromedriver-service": "^8.0.0"
+  }
+}

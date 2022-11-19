@@ -1,0 +1,21 @@
+{
+  "name": "module-6",
+  "version": "1.0.0",
+  "description": "Module 6: WebdriverIO: Page Object Model",
+  "license": "EPAM Systems",
+  "private": true,
+  "scripts": {
+    "test": "wdio run src/configs/wdio.conf.js"
+  },
+  "dependencies": {
+    "allure-commandline": "^2.18.1",
+    "expect-webdriverio": "^3.4.0"
+  },
+  "devDependencies": {
+    "@wdio/allure-reporter": "^7.25.2",
+    "@wdio/selenium-standalone-service": "^7.25.1",
+    "chromedriver": "^107.0.0",
+    "geckodriver": "^3.2.0",
+    "wdio-geckodriver-service": "^4.0.0"
+  }
+}

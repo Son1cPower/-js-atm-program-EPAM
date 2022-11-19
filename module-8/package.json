@@ -1,0 +1,13 @@
+{
+  "name": "module-8",
+  "version": "1.0.0",
+  "description": "Module 8: BDD in Automated Testing with JavaScript",
+  "license": "EPAM Systems",
+  "private": true,
+  "scripts": {
+    "test": "wdio run ./src/configs/wdio.conf.js"
+  },
+  "dependencies": {
+    "@wdio/cucumber-framework": "^7.23.0"
+  }
+}
