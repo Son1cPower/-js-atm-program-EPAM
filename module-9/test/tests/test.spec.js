@@ -1,9 +1,18 @@
 const { expect } = require('chai');
+const { spawn } = require('child_process');
+const { setTimeout } = require('timers/promises');
 const { sendRequest } = require('../helpers/api.helper');
 const testData = require('../config/data.json');
 
+/* eslint-disable */
 describe('API Test Suite', () => {
   let postId;
+  let childProcess;
+
+  before(async () => {
+    childProcess = await spawn('npm.cmd', ['--prefix', './service', 'start'], { detached: false });
+    await setTimeout(10000);
+  });
 
   it('should get() all posts', async () => {
     const response = await sendRequest('posts');
@@ -71,5 +80,9 @@ describe('API Test Suite', () => {
   it('Negative scenarios for catch', async () => {
     const post = await sendRequest('posts/99999');
     expect(post.status).to.equal(404);
+  });
+
+  after(function () {
+    process.exit(0);
   });
 });
